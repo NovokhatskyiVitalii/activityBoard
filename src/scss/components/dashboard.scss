@@ -1,0 +1,23 @@
+.dashboard {
+    min-height: 100vh;
+    padding: 4rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .dashboard_content {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        display: grid;
+        gap: 1.5rem;
+        justify-content: center;
+        grid-template-columns: repeat(1, minmax(300px, 330px));
+    }
+
+   @media (min-width: 1024px) { 
+    .dashboard_content{
+       grid-template-columns: repeat(4, 1fr); 
+    }
+   }
+}

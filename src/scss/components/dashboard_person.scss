@@ -1,0 +1,95 @@
+.dashboard_person {
+    width: 100%;
+    background-color: $blue-800;
+    border-radius: $radii;
+
+    .info-card {
+        background-color: $blue-500;
+        border-radius: $radii;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid: 1rem;
+
+        .info-card_photo {
+            width: 50px;
+            height: 50px;
+            border: 3px solid white;
+            border-radius: $radii-full;
+        }
+
+        .info-card_text {
+            margin: 0 0 0 1rem;
+
+            .info-card_subtitle {
+                font-weight: $weight-light;
+                margin: 0;
+                font-size: 12px;
+            }
+
+            .info-card_title {
+                font-weight: $weight-light;
+                margin: 0.5rem 0 0;
+            }
+        }
+
+
+    }
+
+    .view-selector {
+        padding: 1.25rem 2rem;
+        display: flex;
+        justify-content: space-between;
+
+        .view-selector_item {
+            font-size: 12px;
+            color: $blue-200;
+            cursor: pointer;
+
+            &:hover {
+                color: white;
+            }
+
+            &.active {
+                color: white;
+            }
+        }
+
+    }
+
+    @media (min-width: 1024px) {
+        .dashboard_person {
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .info-card {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-grow: 1;
+
+                .info-card_photo {
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            .info-card_title {
+                font-size: 30px;
+            }
+        }
+
+        .view-selector {
+            flex-direction: column;
+
+            .view-selector_item:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
