@@ -1,12 +1,15 @@
 const requestData = () => {
-    async function getDashBoardData(url = '/data.json') {
+    async function getDashBoardData(url= '/data.json') {
         const response = await fetch(url);
         const data = await response.json();
 
         return data;
     }
 
-    getDashBoardData()
+// fix github pages
+const url = window.location.href.concat('/data.json');
+
+    getDashBoardData(url)
         .then(data => {
             const activities = data.map((activity) => new DashBoardItem(activity));
             const selectors = document.querySelectorAll('.view-selector_item');
