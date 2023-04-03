@@ -7,7 +7,7 @@ const requestData = () => {
     }
 
 // fix github pages
-const url = window.location.href.concat('/data.json');
+const url = window.location.href.concat('data.json');
 
     getDashBoardData(url)
         .then(data => {
