@@ -57,6 +57,7 @@
                 padding: 1.25rem 2rem;
                 display: flex;
                 justify-content: space-between;
+               
 
                 .view-selector_item {
                     font-size: 12px;
@@ -89,6 +90,10 @@
                 padding: 1.25rem;
                 position: relative;
                 bottom: -2px;
+                -webkit-transition: all 0.3s ease;;
+                -moz-transition: all 0.3s ease;;
+                -o-transition: all 0.3s ease;;
+                transition: all 0.3s ease;
 
                 .tracking-card_header {
                     display: flex;
@@ -111,6 +116,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
+                    
 
                     .tracking-card_time {
                         font-size: 32px;
@@ -126,6 +132,7 @@
 
                 &:hover {
                     background-color: $blue-500;
+                    transition-delay: 2ms;
                 }
             }
 
@@ -222,4 +229,5 @@
 
         }
     }
+
 }
